@@ -1,0 +1,87 @@
+\documentclass[a4paper,11pt]{article}
+
+% Compilación:
+% latexmk -shel-escape -pdf -pvc
+
+% Comandos útiles
+% \texttt{...}                                  estilo typewriter (máquina de escribir)
+% \begin{sloopy}                        usado con \texttt, para que respete márgenes
+% \begin{verbatim}                  mejor que textt+sloopy (respeta espacios)
+% \url{...}                                 insertar enlaces
+% \begin{itemize} \item         para crear una lista
+% \begin{enumerate}[label=\alph*)]      una enumeracion con indices las letras del alfabeto
+% \emph{...}                        para enfatizar algo
+% \begin{tabular}               para crear una tabla
+% \begin{minted}{L}         para insertar codigo de algun lenguage L
+
+% Comandos matemáticos útiles
+% \mathbb{...}                          para las letras de pizarra (como R y N)
+% \mathfrak{...}                    para representar ideales
+% \in                                   simbolo de pertenencia
+% $...$, $$...$$, \[...\]       para insertar contenido matematica inline y separado
+% \begin{pmatrix}       para crear matrices
+
+% Caracteres que hay que escapar: _, \
+
+% Configurar el idioma
+\usepackage[spanish]{babel} % para fijar idioma actual al castellano
+\usepackage[utf8]{inputenc} % para los acentos
+\usepackage[T1]{fontenc} % para silabación correcta
+
+% Configurar la página y los márgenes
+\setlength{\parskip}{0.5em} % para que haya espacio entre los párrafos
+%\addtolength{\hoffset}{-1.5cm}
+%\addtolength{\textwidth}{2cm}
+
+% Paquetes
+\usepackage{amsthm} % para usar \newtheorem y \proof
+\usepackage{amsmath} % para usar matrices
+\usepackage{amssymb} % para usar simbolos de matematicas (como R y N)
+\usepackage{comment} % para usar \comment
+\usepackage{hyperref} % para usar enlaces
+\hypersetup{pdfauthor={Nombre}, % rellenamos la seccion Document Info del PDF
+                    pdftitle={Titulo},
+                    colorlinks, %le quitamos el marco de color a los enlaces
+                    urlcolor=blue, %color de enlaces a la red (HTTP)
+                    pdftex}
+\usepackage{enumitem} % pasa usar tag distintos en las enumeraciones
+\usepackage[pdftex]{color,graphicx} % para insertar imagenes
+\usepackage{minted} % para poner codigo (p.e. python)
+                                    % hay que compilar con pdflatex -shell-scape ...
+
+% Título del documento
+\author{Nombre}
+\title{Titulo}
+
+% Definición de estilos de "teoremas": \newtheorem{identificador}{texto}
+\theoremstyle{plain} % titulo negrita, cuerpo cursiva
+\newtheorem*{pregunta}{Ejercicio}
+\theoremstyle{definition} % titulo negrita, cuerpo en recta
+\newtheorem*{solucion}{Solución} % * para que no numere
+
+% Definición de nuevos comandos
+\newenvironment{allintypewriter}{\ttfamily}{\par} % para usar typewriter font con multiparagraph
+
+% Cuerpo
+\begin{document}
+
+    \maketitle % genera el título
+
+    %\tableofcontents % inserta el índice general
+
+    %\section{Preguntas}
+
+    \begin{pregunta}
+        Ejemplo de pregunta
+    \end{pregunta}
+
+    \begin{solucion}
+        Ejemplo de respuesta
+
+        \begin{minted}{python}
+# ejemplo de código en python
+print('Hello world')
+        \end{minted}
+
+    \end{solucion}
+\end{document}
