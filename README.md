@@ -1,5 +1,8 @@
 # Plantilla-latex
+
 Una plantilla de latex sencilla con comentarios.
+
+La plantilla la voy actualizando conforme voy escribiendo más documentos con latex. 
 
 ## Requisitos
 
@@ -17,4 +20,5 @@ Pero para no tener que estar compilando cada vez que queramos visualizar el fich
 Yo uso el siguiente comando:
 
     latexmk -shel--escape -pdf -pvc plantilla.tex
+    
 
