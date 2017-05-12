@@ -8,7 +8,7 @@ The template contains many packages to fulfill the needs of academic articles (g
 
 [minted](https://github.com/gpoore/minted)
 
-## Compilación
+## Compilation
 
     latexmk -pdf -quiet -shell-escape article.tex
     
