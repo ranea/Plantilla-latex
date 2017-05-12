@@ -1,0 +1,124 @@
+\documentclass[a4paper,11pt]{article}
+% \documentclass[a4paper,11pt, draft]{article}
+
+
+% Compilation:
+%  - Basic:             latexmk -pdf -quiet article.tex
+%  - Keep updating:     latexmk -pdf -quiet -pvc article.tex
+%  - Minted support:    latexmk -pdf -quiet -shell-escape article.tex
+%  - Clean:             latexmk -C
+
+
+% Language configuration
+%  - English
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+%  - Spanish
+% \usepackage[spanish]{babel}
+% \usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
+
+
+% Packages
+% \usepackage{blindtext} % only for repo example
+% \usepackage[margin=1in]{geometry}  % standardized smaller margins
+
+\usepackage{hyperref}
+\hypersetup{pdfauthor={Name},
+            pdftitle={Title},
+            colorlinks,
+            urlcolor=blue,
+            linkcolor=blue,
+            pdftex}
+
+\usepackage{amsthm} % \newtheorem y \proof
+\usepackage{amsmath} % matrices
+\numberwithin{equation}{section} % numbering eqs by sections
+\usepackage{amssymb} % maths symbol (R, N, ...)
+\usepackage{mathtools} % \rcases
+\usepackage{seqsplit} % to split big numbers
+\usepackage{centernot} % \not \eq
+
+\usepackage{graphicx} % \includegraphics
+\graphicspath{ {images/} }
+\usepackage{epstopdf} % to use .eps images
+\usepackage{booktabs} % better than tabular, array
+\usepackage{minted} % \begin{minted}[fontsize=...]{python}
+\usepackage{tikz}
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\usepackage{comment} % \comment
+\usepackage{enumitem} % \begin{enumerate}[label=\alph*)]
+\usepackage{caption} % \caption*
+
+
+% Title
+\author{Name}
+\title{Title}
+% \subtitle{}
+% \date{\today}
+
+
+% User commands
+\newenvironment{tightcenter}{%
+  \setlength\topsep{0pt}
+  \setlength\parskip{0pt}
+  \begin{center}
+}{%
+  \end{center}
+}
+\DeclareMathOperator{\lcm}{lcm}
+\newcommand\floor[1]{\lfloor#1\rfloor}
+\newcommand\ceil[1]{\lceil#1\rceil}
+
+
+% User theorems
+\theoremstyle{definition} % titulo negrita, cuerpo en recta
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{example}{Example}[section]
+
+
+% Useful pieces of latex code
+%  - Inserting an image:
+% \begin{figure}[h]
+% \centering
+% \includegraphics[width=0.5\textwidth]{...}
+% \caption{...}
+% \end{figure}
+%  - Adding the hand-made bibliography to the toc
+% \addcontentsline{toc}{section}{References}
+%  - Pseudo code
+% \begin{algorithm}
+%     \begin{algorithmic}%[1]
+%         \caption{...}
+%         \Require ...
+%         \State ...
+%         \ForAll{...}
+%           \If{...}
+%               \State ...
+%           \Else
+%               \State ...
+%           \EndIf
+%         \EndFor
+%     \end{algorithmic}
+% \end{algorithm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+    \maketitle
+
+    %\tableofcontents
+
+    \section{Section}
+
+    %\blindmathpaper
+
+\end{document}
