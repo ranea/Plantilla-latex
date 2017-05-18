@@ -53,11 +53,12 @@
 \usepackage{enumitem} % \begin{enumerate}[label=\alph*)]
 \usepackage{caption} % \caption*
 \usepackage{xspace} % automatic space after newcommand
+\usepackage{url} % \url
 
 
 % Title
 \author{Name}
-\title{Title}
+\title{Title \\ Subtitle}
 % \date{\today}
 
 
@@ -72,6 +73,7 @@
 \DeclareMathOperator{\lcm}{lcm}
 \newcommand\floor[1]{\lfloor#1\rfloor}
 \newcommand\ceil[1]{\lceil#1\rceil}
+\newcommand{\code}[1]{\texttt{#1}}
 %\newcommand\ABC{\textsc{ABC}\xspace}
 
 
@@ -82,29 +84,47 @@
 
 
 % Useful pieces of latex code
+
+%  - Inserting code
+% \begin{listing}[h]
+% \begin{minted}{python}
+%     ...
+% \end{minted}
+% \caption{...}
+% \label{...}
+% \end{listing}
+
 %  - Inserting an image:
 % \begin{figure}[h]
 % \centering
 % \includegraphics[width=0.5\textwidth]{...}
 % \caption{...}
+% \label{...}
 % \end{figure}
+
 %  - Adding the hand-made bibliography to the toc
 % \addcontentsline{toc}{section}{References}
+
 %  - Pseudo code
-% \begin{algorithm}
+% \begin{algorithm}[h]
 %     \begin{algorithmic}%[1]
-%         \caption{...}
-%         \Require ...
-%         \State ...
-%         \ForAll{...}
-%           \If{...}
-%               \State ...
-%           \Else
-%               \State ...
-%           \EndIf
-%         \EndFor
+%         \Function{name}{args}
+%             \Require ...
+%             \State ...
+%             \ForAll ... 
+%                 \If ... 
+%                     \State ...
+%                 \Else
+%                     \State ...
+%               \EndIf
+%             \EndFor
 %     \end{algorithmic}
+%     \caption{...}
+%     \label{...}
 % \end{algorithm}
+
+% - Two columns of code
+% https://tex.stackexchange.com/a/36741
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
