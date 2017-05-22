@@ -1,0 +1,174 @@
+% aspectratio = {43, 169}
+% optional beamer argument: spanish
+\documentclass[aspectratio=169,11pt]{beamer}
+
+
+% Compilation:
+%  - Basic:             latexmk -pdf -quiet slides.tex
+%  - Keep updating:     latexmk -pdf -quiet -pvc slides.tex
+%  - Minted support:    latexmk -pdf -quiet -shell-escape slides.tex
+%  - Clean:             latexmk -C
+
+
+% Language configuration
+%  - English
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+%  - Spanish
+% \usepackage[spanish]{babel}
+% \usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
+
+
+% Theme
+\usetheme{metropolis}
+
+
+% Packages
+
+% \usepackage{blindtext} % only for repo example
+
+\usepackage{pgfpages}
+\usepackage{palatino}
+% setbeameroption = {hide notes, show only notes, show notes on second screen=right}
+\setbeameroption{show notes on second screen=right} % Both
+\setbeamertemplate{note page}{\pagecolor{yellow!5}\insertnote}
+
+\usepackage{amsthm} % \newtheorem y \proof
+\usepackage{amsmath} % matrices
+\numberwithin{equation}{section} % numbering eqs by sections
+\usepackage{amssymb} % maths symbol (R, N, ...)
+\usepackage{mathtools} % \rcases
+\usepackage{seqsplit} % to split big numbers
+\usepackage{centernot} % \not \eq
+
+\usepackage{graphicx} % \includegraphics
+\graphicspath{ {images/} }
+\usepackage{epstopdf} % to use .eps images
+\usepackage{booktabs} % better than tabular, array
+\usepackage{minted} % \begin{minted}[fontsize=...]{python}
+\usepackage{tikz}
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\usepackage{comment} % \comment
+\usepackage{enumitem} % \begin{enumerate}[label=\alph*)]
+\usepackage{caption} % \caption*
+\usepackage{xspace} % automatic space after newcommand
+\usepackage{url} % \url
+
+
+% Title
+\author{Name}
+\title{Title}
+\subtitle{}
+% \date{\today}
+% \institute{}
+
+
+% User commands
+\newenvironment{tightcenter}{%
+  \setlength\topsep{0pt}
+  \setlength\parskip{0pt}
+  \begin{center}
+}{%
+  \end{center}
+}
+\DeclareMathOperator{\lcm}{lcm}
+\newcommand\floor[1]{\lfloor#1\rfloor}
+\newcommand\ceil[1]{\lceil#1\rceil}
+\newcommand{\code}[1]{\texttt{#1}}
+%\newcommand\ABC{\textsc{ABC}\xspace}
+
+
+% Useful pieces of latex code (more in frames_examples.tex)
+
+%  - Inserting code
+% \begin{listing}[h]
+% \begin{minted}{python}
+%     ...
+% \end{minted}
+% \caption{...}
+% \label{...}
+% \end{listing}
+
+%  - Inserting an image:
+% \begin{figure}[h]
+% \centering
+% \includegraphics[width=0.5\textwidth]{...}
+% \caption{...}
+% \label{...}
+% \end{figure}
+
+%  - Pseudo code
+% \begin{algorithm}[h]
+%     \begin{algorithmic}%[1]
+%         \Function{name}{args}
+%             \Require ...
+%             \State ...
+%             \ForAll ...
+%                 \If ...
+%                     \State ...
+%                 \Else
+%                     \State ...
+%               \EndIf
+%             \EndFor
+%     \end{algorithmic}
+%     \caption{...}
+%     \label{...}
+% \end{algorithm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Contents}
+    \setbeamertemplate{section in toc}[sections numbered]
+    \tableofcontents[hideallsubsections]
+
+    \note{
+        I will start talking about ...
+    }
+\end{frame}
+
+\section{Section 1}
+
+\begin{frame}{Body 1}
+    % \blinditemize
+
+    \note{\footnotesize{
+        % \blindtext
+        % it's necessary to put a blank line at the end of note environment
+
+    }}
+\end{frame}
+
+
+\begin{frame}[standout]
+  Questions?
+\end{frame}
+
+\begin{frame}{References}
+    \nocite{...}  % to print the refereces
+
+    \begin{thebibliography}{9}
+
+    \bibliographystyle{abbrv}
+
+    \bibitem{latexcompanion}
+    Michel Goossens, Frank Mittelbach, and Alexander Samarin.
+    \textit{The \LaTeX\ Companion}.
+    Addison-Wesley, Reading, Massachusetts, 1993.
+
+
+    \end{thebibliography}
+\end{frame}
+
+\end{document}
