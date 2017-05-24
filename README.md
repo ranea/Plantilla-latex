@@ -1,8 +1,8 @@
 # Simple latex templates
 
-A latex template for writing articles and presentations.
+Two latex templates for writing articles and presentations.
 
-The templates contains many packages to fulfill the needs of academic articles (graphics, programm code, maths, ...)
+The templates contain many packages to fulfill the needs of academic articles/presentations (graphics, programm code, maths, ...)
 
 ## Dependencies
 
