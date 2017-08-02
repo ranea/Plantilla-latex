@@ -7,14 +7,11 @@ The templates contain many packages to fulfill the needs of academic articles/pr
 ## Dependencies
 
 [minted](https://github.com/gpoore/minted)
+
 [metropolis](https://github.com/matze/mtheme)
 
 ## Compilation
 
-    latexmk -pdf -quiet -shell-escape article.tex
-    
- or
- 
-    latexmk -pdf -quiet -shell-escape slides.tex
+    latexmk -pdf -quiet -shell-escape {article, slides}.tex
     
 
