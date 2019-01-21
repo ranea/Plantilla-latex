@@ -4,9 +4,12 @@
 % latexmk -lualatex article.tex
 
 %  - Fonts
+% LuaLatex
 \usepackage{polyglossia}  % hy­phen­ation
-\setdefaultlanguage{uk}  % spanish
+\setdefaultlanguage{uk}  % or spanish
 % \usepackage{fontspec}  % to load fonts
+% PdfLatex
+% \usepackage[utf8]{inputenc}
 \usepackage{microtype}  % typographical improvements
 
 %  - Math related
@@ -21,7 +24,9 @@
 \usepackage{booktabs} % prettier tables
 % \usepackage{minted} % \begin{minted}[fontsize=...]{python}
 % \usepackage{tikz}
-% \usepackage{algorithm2e}
+% \usepackage[noend]{algorithmic}
+% \renewcommand{\algorithmicrequire}{\textbf{Input:}}
+% \renewcommand{\algorithmicensure}{\textbf{Output:}}
 
 % - Others
 % \usepackage{url} % \url
@@ -32,11 +37,11 @@
 % \usepackage{todonotes}
 % \usepackage[backend=biber]{biblatex}
 % \addbibresource{references.bib}
+% \usepackage{cite} % sort citations?
 
 % - Cross References (The TEXpert’s Guide to Survival)
-% Use vref (+ verbose) or cref
-% \caption{} then \label{}
-% \vref{eq:key1,sec:key2} instead of \vref{eq:key1, sec:key2}
+% Use Vref (verbose reference) or Cref instead of ref
+% no spaces between multiples refs, i.e. \Cref{eq1,eq2}
 \usepackage{varioref}
 \usepackage{hyperref}
 \hypersetup{pdfauthor={Author},
@@ -57,6 +62,8 @@
 %   \end{center}
 % }
 % \DeclareMathOperator{\foo}{foo}  %  $ \foo(bar)
+% \newcommand{\xor}{\ensuremath{\mathop\oplus}}
+% \newcommand{\add}{\ensuremath{\mathop\boxplus}}
 % \newcommand{\mycommand}[1]{\existingcommand{#1}}
 
 % - Useful pieces of latex code
@@ -91,6 +98,12 @@
 %     \caption{...}
 %     \label{...}
 % \end{table*}
+
+% - Other tips
+% space between words: e.g.\ instead of e.g. 
+% puntuaction in equation: $[...]\,.$ or \,.
+% no blank line after/before equation (after produces indent, before produces big space)
+% captions should make figures self-contained
 
 
 %%%%%%%%%%%%%%%%%%%%     DOCUMENT     %%%%%%%%%%%%%%%%%%%%
