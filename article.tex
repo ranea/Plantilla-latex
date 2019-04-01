@@ -1,18 +1,25 @@
 \documentclass[a4paper]{article}
 
+% See also
+% - http://tug.ctan.org/info/latexcheat/latexcheat/latexsheet.pdf
+% - http://tug.ctan.org/info/biblatex-cheatsheet/biblatex-cheatsheet.pdf
+
 % - Compilation
+% latexmk -pdf article.txt
 % latexmk -lualatex article.tex
 
-%  - Fonts
-% LuaLatex
-\usepackage{polyglossia}  % hy­phen­ation
-\setdefaultlanguage{uk}  % or spanish
-% \usepackage{fontspec}  % to load fonts
+%  - Language & Fonts
 % PdfLatex
+\usepackage{babel}
 % \usepackage[utf8]{inputenc}
 \usepackage{microtype}  % typographical improvements
+% LuaLatex
+% \usepackage{polyglossia}  % hy­phen­ation
+% \setdefaultlanguage{uk}  % or spanish
+% \usepackage{fontspec}  % to load fonts
 
-%  - Math related
+
+%  - Math
 \usepackage{amsmath} % equation, align, matricies...
 % \usepackage[standard]{ntheorem}  % Theorem, Definition, Proof....
 % \usepackage{amssymb} % extended symbol collection
@@ -30,14 +37,15 @@
 
 % - Others
 % \usepackage{url} % \url
-% \usepackage[margin=1in]{geometry}  % standardized smaller margins
+% \usepackage[margin=1in]{geometry}  % smaller margins
 % \usepackage{enumitem} % \begin{enumerate}[label=\alph*)]
 % \usepackage{caption} % \caption*
 % \usepackage{xspace} % automatic space after newcommand
 % \usepackage{todonotes}
-% \usepackage[backend=biber]{biblatex}
+% \usepackage{csquotes,xpatch} % recommended by biblatex
+% \usepackage[backend=biber,style=alphabetic]{biblatex}
 % \addbibresource{references.bib}
-% \usepackage{cite} % sort citations?
+% \usepackage{cite} % incomaptible with biblatex!
 
 % - Cross References (The TEXpert’s Guide to Survival)
 % Use Vref (verbose reference) or Cref instead of ref
