@@ -1,38 +1,59 @@
 \documentclass[a4paper]{article}
 
+
 % See also
 % - http://tug.ctan.org/info/latexcheat/latexcheat/latexsheet.pdf
 % - http://tug.ctan.org/info/biblatex-cheatsheet/biblatex-cheatsheet.pdf
+
 
 % - Compilation
 % latexmk -pdf article.txt
 % latexmk -lualatex article.tex
 
+
 %  - Language & Fonts
 % PdfLatex
 \usepackage[british]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage{microtype}  % typographical improvements
 % LuaLatex
 % \usepackage{polyglossia}  % hy­phen­ation
 % \setdefaultlanguage{uk}  % or spanish
 % \usepackage{fontspec}  % to load fonts
+% Both
+\usepackage{microtype}  % typographical improvements
 
 
 %  - Math
 \usepackage{amsmath} % equation, align, matricies...
 % \usepackage[standard]{ntheorem}  % Theorem, Definition, Proof....
 % \usepackage{amssymb} % extended symbol collection
-% \usepackage{mathtools} % mathbox
+% \usepackage{mathtools} % mathbox and \rcases
 % \usepackage{centernot} % centred \not command
+% \numberwithin{equation}{section} % numbering eqs by sections
+% \usepackage{seqsplit} % to split big numbers
+
 
 % - Floats
 \usepackage{graphicx} % \includegraphics[width=\textwidth]{filename}
 \graphicspath{ {images/} }
 \usepackage{booktabs} % prettier tables
 % \usepackage{minted} % \begin{minted}[fontsize=...]{python}
+% \usepackage{epstopdf} % to use .eps images
+% \usepackage[options]{algorithm2e}  # other similar packages outdated; options: ruled,vlined]
+
+
+% - Tikz
 % \usepackage{tikz}
-% \usepackage[options]{algorithm2e}  # other similar packages outdated
+% \usetikzlibrary{arrows}
+% \usetikzlibrary{positioning}
+% \usetikzlibrary{shapes}
+% \usetikzlibrary{calc}
+% Custom TikZ addons
+% \usetikzlibrary{crypto.symbols}  % https://www.iacr.org/authors/tikz/
+% \tikzset{shadows=no}        % Option: add shadows to XOR, ADD, etc.
+% \tikzstyle{int}=[draw, fill=blue!20, minimum size=2em]
+% \tikzstyle{init} = [pin edge={to-,thin,black}]
+
 
 % - Others
 % \usepackage{url} % \url
@@ -45,6 +66,7 @@
 % \usepackage[backend=biber,style=alphabetic]{biblatex}
 % \addbibresource{references.bib}
 % \usepackage{cite} % incomaptible with biblatex!
+
 
 % - Cross References (The TEXpert’s Guide to Survival)
 % Use Vref (verbose reference) or Cref instead of ref
@@ -59,7 +81,6 @@
 \usepackage{cleveref}
 
 
-
 % - New commands
 % \newenvironment{tightcenter}{%
 %   \setlength\topsep{0pt}
@@ -69,11 +90,18 @@
 %   \end{center}
 % }
 % \DeclareMathOperator{\foo}{foo}  %  $ \foo(bar)
+% \DeclareTextFontCommand{\review}{\bfseries\color{red}}
 % \newcommand{\xor}{\ensuremath{\mathop\oplus}}
 % \newcommand{\add}{\ensuremath{\mathop\boxplus}}
 % \newcommand{\mycommand}[1]{\existingcommand{#1}}
+% \newcommand\floor[1]{\lfloor#1\rfloor}
+% \newcommand\ceil[1]{\lceil#1\rceil}
+% \newcommand{\code}[1]{\texttt{#1}}
+% \newcommand\ABC{\textsc{ABC}\xspace}
+% \newcommand{\inlinetodo}[2][]{\todo[inline, size=\footnotesize, caption={#2}, #1]{#2}}
 
-% - Useful pieces of latex code
+
+% - Latex snippets
 %%
 % \begin{listing}[h]
 % \begin{minted}{python}
