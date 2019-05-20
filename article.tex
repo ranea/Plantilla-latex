@@ -39,7 +39,7 @@
 \usepackage{booktabs} % prettier tables
 % \usepackage{minted} % \begin{minted}[fontsize=...]{python}
 % \usepackage{epstopdf} % to use .eps images
-% \usepackage[options]{algorithm2e}  # other similar packages outdated; options: ruled,vlined]
+% \usepackage[options]{algorithm2e}  # other similar packages outdated; options: ruled,vlined
 
 
 % - Tikz
@@ -61,11 +61,11 @@
 % \usepackage{enumitem} % \begin{enumerate}[label=\alph*)]
 % \usepackage{caption} % \caption*
 % \usepackage{xspace} % automatic space after newcommand
-% \usepackage{todonotes}
+% \usepackage{todonotes} % common options: disable
 % \usepackage{csquotes,xpatch} % recommended by biblatex
-% \usepackage[backend=biber,style=alphabetic]{biblatex}
+% \usepackage[backend=biber,style=alphabetic]{biblatex}  % options: doi=false,isbn=false,url=false
 % \addbibresource{references.bib}
-% \usepackage{cite} % incomaptible with biblatex!
+% \usepackage{cite} % incompatible with biblatex!
 
 
 % - Cross References (The TEXpert’s Guide to Survival)
@@ -89,17 +89,16 @@
 % }{%
 %   \end{center}
 % }
-% \DeclareMathOperator{\foo}{foo}  %  $ \foo(bar)
+% \DeclareMathOperator{\hw}{HW}
 % \DeclareTextFontCommand{\review}{\bfseries\color{red}}
 % \newcommand{\xor}{\ensuremath{\mathop\oplus}}
 % \newcommand{\add}{\ensuremath{\mathop\boxplus}}
-% \newcommand{\mycommand}[1]{\existingcommand{#1}}
-% \newcommand\floor[1]{\lfloor#1\rfloor}
-% \newcommand\ceil[1]{\lceil#1\rceil}
+% \newcommand{\floor}[1]{\lfloor#1\rfloor}
+% \newcommand{\ceil}[1]{\lceil#1\rceil}
 % \newcommand{\code}[1]{\texttt{#1}}
-% \newcommand\ABC{\textsc{ABC}\xspace}
-% \newcommand{\inlinetodo}[2][]{\todo[inline, size=\footnotesize, caption={#2}, #1]{#2}}
-
+% \newcommand{\ABC}{\textsc{ABC}\xspace}
+% \newcommand{\inlinetodo}[2]{\todo[inline, size=\footnotesize, #1]{#2}}
+% \newcommand{\inlinetodourgent}[2]{\todo[inline, size=\footnotesize, color=cyan, #1]{#2}}
 
 % - Latex snippets
 %%
